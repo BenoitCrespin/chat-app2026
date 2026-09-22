@@ -4,23 +4,29 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "prisma skills sync || exit 0"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@prisma/client": "^7.10.0",
+    "@prisma/client": "^5.22.0",
+    "dotenv": "^18.0.3",
     "express": "^5.1.0",
-    "prisma": "^8.0.0-rc.15",
+    "prisma": "^5.22.0",
     "socket.io": "^4.8.1",
     "sqlite": "^5.1.1",
-    "twig": "^1.17.1"
+    "twig": "^1.17.1",
+    "ws": "^8.21.3"
   },
   "allowScripts": {
     "esbuild@0.28.2": true,
     "msgpackr-extract@3.0.4": true,
     "workerd@1.20260704.1": true
+  },
+  "devDependencies": {
+    "prisma-cli": "^1.0.9"
   }
 }
